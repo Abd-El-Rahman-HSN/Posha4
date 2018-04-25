@@ -1,0 +1,26 @@
+<div class='nested-fields'>
+                                    <div class="form-group">
+                                        <%= f.input :competition, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+
+                                    <label>No. of times</label>
+                                    <div class="form-group">
+                                        <%= f.input :countts, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+
+                                    <label>Season</label>
+                                    <div class="form-group">
+                                        <%= f.input :years, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+
+                                    <label>Position</label>
+                                    <div class="form-group">
+                                        <%= f.input :position, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+
+
+  <div class="col-xs-2" style="float: left;">
+    <%= link_to_remove_association "remove task" , f ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary' %>
+</div>  
+
+</div>

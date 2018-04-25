@@ -1,0 +1,208 @@
+            <header class="header-articles">
+        
+                <div class="container">
+                    <h1>Article</h1>
+                    <%= link_to 'Back', articles_path ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary'%>
+                </div>
+            </header>
+
+            <div class="content3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="jou-info">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="jou-img">
+                                        <%= image_tag @article.img.url , class: "img"%>
+                                    </div>
+                                </div>
+
+                                <div class="col-7">
+                                    <div class="jou-name">
+                                        <h5 class="h6"><%= User.find(@article.user_id).Full_Name %></h5>
+                                    </div>
+                                    <%= User.find(@article.user_id).About %>
+                                </div>
+                            </div>
+
+                            <div class="extra-info">
+                                <span class="h5">Follow Us</span>
+                                <ul class="list-unstyled">
+                                        <li><a href="#"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+                                </ul>
+
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="article">
+                            <h2><%= @article.nameae %></h2>
+
+                            <%= image_tag @article.img.url , class: "img"%>
+
+                            <p><%= raw @article.text %></p>
+                            
+
+                            <div class="extras">
+                                    <div class="row">
+                                            <div class="col-1">
+                                                <div class="next-per">
+                                                   
+                                                </div>
+                                            </div>
+
+                                            <div class="col-2">
+                                                <div class="social">
+                                                <br>
+                                                    <%= link_to 'Edit', edit_article_path(@article),style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary' %> 
+                                                </div>
+                                            </div>
+            
+                                            <div class="col-3">
+                                                <div class="next-per">
+                                                   
+                                                </div>
+                                            </div>
+
+                                            <div class="col-5">
+                                                <div class="date">
+                                                    <span><%= @article.created_at.to_formatted_s(:short) %> - <%= User.find(@article.user_id).Full_Name %></span>
+                                                </div>
+                                            </div>
+                                           
+                                            <div id="disqus_thread" class="col-12"></div>
+                            <script>
+
+
+                            var disqus_config = function () {
+                            this.shortname = "poshka4";
+                            this.page.url = "<%= url_for([@article, {only_path: false}]) %>" ; 
+                            this.page.identifier = '<%= @article.id %>'; 
+                            this.page.title = "<%= @article.nameae %>";
+                            };
+
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://poshka4.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                            })();
+                            </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+                            </div>
+
+
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                            <div class="article-shower">
+                                    <div class="article-nav">
+                                        <ul class="list-unstyled">
+                                            <li data-type="#popular" class="active">Popular</li>
+                                            <li data-type="#recent">Recent</li>
+                                            <li data-type="#mostv">Most Reviwed</li>
+                                        </ul>
+                                    </div>
+        
+                                    <div class="article-body">
+        
+                                        <div id="popular" class="popular">
+                                                <div class="article-tap">
+                                                        <div class="row">
+                    
+                                                            <div class="col-4">
+                                                                <img src="../images/article/article1.jpg" alt="article">
+                                                            </div>
+                    
+                                                            <div class="col-8">
+                                                                <h4>Article</h4>
+                                                                <span>Oct 12 20</span>
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                    
+                                                    
+                                        </div>
+        
+                                        <div id="recent" class="recent">
+                                                <div class="article-tap">
+                                                        <div class="row">
+                    
+                                                            <div class="col-4">
+                                                                <img src="../images/article/article1.jpg" alt="article">
+                                                            </div>
+                    
+                                                            <div class="col-8">
+                                                                <h4>Article</h4>
+                                                                <span>Oct 12 20</span>
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                    
+                                                    
+                                        </div>
+        
+                                        <div id="mostv" class="mostv">
+                                                <div class="article-tap">
+                                                        <div class="row">
+                    
+                                                            <div class="col-4">
+                                                                <img src="../images/article/article1.jpg" alt="article">
+                                                            </div>
+                    
+                                                            <div class="col-8">
+                                                                <h4>Article</h4>
+                                                                <span>Oct 12 20</span>
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                    
+                                                    
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="jou-list">
+                                        <div class="journalist">
+                                                <h3>Journalists</h3>
+                                                <% @journalist.each do |user| %>
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="jou-img">
+                                                            <%= image_tag user.photo.url(:medium) %>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="col-lg-8">
+                                                        <div class="jou-name">
+                                                            <h6><%= user.Full_Name %></h6>
+                                                            <p><%= user.About %></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <% end %>
+                                            </div>
+                
+                                            
+                                </div>
+                    </div>
+                </div>
+            </div>

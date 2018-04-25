@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  season: MyString
+  data: 2018-03-29
+  from: MyString
+  to: 2018-03-29
+  transfer_fee: 1
+  player: one
+
+two:
+  season: MyString
+  data: 2018-03-29
+  from: MyString
+  to: 2018-03-29
+  transfer_fee: 1
+  player: two

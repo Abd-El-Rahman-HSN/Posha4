@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Performances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Season</th>
+      <th>Club</th>
+      <th>Country</th>
+      <th>Competition</th>
+      <th>Tier</th>
+      <th>Matches</th>
+      <th>Goals</th>
+      <th>Assists</th>
+      <th>Yellow</th>
+      <th>Red</th>
+      <th>Player</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @performances.each do |performance| %>
+      <tr>
+        <td><%= performance.season %></td>
+        <td><%= performance.club %></td>
+        <td><%= performance.country %></td>
+        <td><%= performance.competition %></td>
+        <td><%= performance.tier %></td>
+        <td><%= performance.matches %></td>
+        <td><%= performance.goals %></td>
+        <td><%= performance.assists %></td>
+        <td><%= performance.yellow %></td>
+        <td><%= performance.red %></td>
+        <td><%= performance.player %></td>
+        <td><%= link_to 'Show', performance %></td>
+        <td><%= link_to 'Edit', edit_performance_path(performance) %></td>
+        <td><%= link_to 'Destroy', performance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Performance', new_performance_path %>

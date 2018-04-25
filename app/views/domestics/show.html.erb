@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Competition:</strong>
+  <%= @domestic.competition %>
+</p>
+
+<p>
+  <strong>Countts:</strong>
+  <%= @domestic.countts %>
+</p>
+
+<p>
+  <strong>Years:</strong>
+  <%= @domestic.years %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @domestic.position %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @domestic.player %>
+</p>
+
+<%= link_to 'Edit', edit_domestic_path(@domestic) %> |
+<%= link_to 'Back', domestics_path %>

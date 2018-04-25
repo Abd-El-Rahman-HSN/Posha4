@@ -1,0 +1,110 @@
+
+
+
+
+
+            <header class="headerae">
+        
+                <div class="container">
+                    <h1>All Articles</h1>
+                    <% if !user_signed_in? %>
+                    <% else %>
+                        <% if current_user.journalist?  %>
+                            <%= link_to 'New Article', new_article_path ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary'%>
+                        <% elsif current_user.admin? %>
+                            <%= link_to 'New Article', new_article_path ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary'%>
+                        <% end %>
+                    <% end %>
+                </div>
+            </header>
+
+            <!--Start Content-->
+
+            <div class="content1">
+
+                <div class="article-nav">
+                    <div class="container">
+                        <ul class="list-unstyled">
+                            <li data-type="#popular">Popular</li>
+                            <li data-type="#recent">Recent</li>
+                            <li data-type="#mostv">Top Reviews</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-8">
+
+                            <div class="article-body">
+                                    <div class="popular" id="popular">
+                                        <table>
+                                        <% @articles.each do |article| %>
+                                                    <tr>
+                                            <td><div class="article">
+                                                    <div class="row">
+                                                            <div class="col-md-5">
+                                                                    <div class="plr-img">
+                                                                        <%= image_tag article.img.url(:medium) %>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                    
+                                                                <div class="col-md-7">
+                                                                    <div class="article-info">
+                                                                        <h5><%= article.nameae %></h5>
+                                                                        <p><%= raw article.text %></p>
+                                                                        <span><%= article.created_at.to_formatted_s(:short) %> - <%= User.find(article.user_id).Full_Name %><br><%= link_to 'Show', article , class: "btn" %></span>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                              <td></td>
+                                                    </div>
+                                                </div>
+                                                </td>
+                            </tr>
+                            </table>
+                        <% end %>
+                                    </div>
+        
+ 
+                            </div>
+
+                        </div>
+ 
+                        <div class="col-md-4">
+                            <div class="journalist">
+                                <h3>Journalists</h3>
+                                <% @journalist.each do |user| %>
+                                <div class="row">
+                                
+                                    <div class="col-lg-4">
+                                        <div class="jou-img">
+                                            <%= image_tag user.photo.url(:medium) %>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-8">
+                                        <div class="jou-name">
+					                            <h6><%= user.Full_Name %></h6>
+				                            
+                                            <p>
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <br>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+

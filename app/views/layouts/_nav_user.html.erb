@@ -1,0 +1,42 @@
+
+       <!--Start Social Media Navbar-->
+        <div class="upper-nav">
+                  <div class="container">
+                          <div class="row">
+      
+                              <div class="col-lg">
+      
+                                  <ul class="list-unstyled">
+                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                  </ul>
+      
+                              </div>
+              
+                              <div class="col-lg">
+
+                                  <ul class="list-unstyled user-opt">
+                                        
+                                        <li class="dropdown">
+                                          <a class="dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                                              <%= current_user.Full_Name %>
+                                          </a>
+              
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="z-index: 99999999999999999999; overflow: hidden;" >
+                                              <%= link_to "Setting", edit_user_registration_path, style: "color: #444;", class: "dropdown-item" %>
+                                              <div class="dropdown-divider"></div>
+                                              <%= link_to "Log Out", destroy_user_session_path, method: :get, style: "color: #444;", class: "dropdown-item" %>
+                                          </div>
+                                      </li>
+                                      <li>English</li>
+                                      
+                                  </ul>
+      
+                              </div>
+              
+                          </div>
+                  </div>
+              </div>
+              <!--End Scoail Media Navbar-->
+              

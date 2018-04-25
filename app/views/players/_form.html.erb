@@ -1,0 +1,258 @@
+<%= simple_form_for @player, local: true, html: { multipart: true } do |f| %>
+
+                 <div id='tasks'>
+                                    <%= f.simple_fields_for :domestics do |domestic| %>
+                                        <%= render 'domestic_fields', :f => domestic %>
+                                    <% end %>
+                                    <div class="links">
+                                    <%= link_to_add_association 'add task', f, :domestics  %>
+                                    </div>
+                                    <br><br>
+                                </div>
+
+<header class="header-add-player">
+        
+        <div class="container">
+            <h1>Add New Player CV</h1>
+        </div>
+    </header>
+
+    <div class="content-add-player">
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-6">
+                                <form>
+                                    <h2>Player Data</h2>
+                                    <label>Name</label>
+                                    <div class="form-group">
+                                          <%= f.input :name , label: false, input_html: { class: 'form-control input-sm' } %>
+                                    </div>
+                
+                                    <label>Number</label>
+                                    <div class="form-group">
+                                          <%= f.input :number , label: false, input_html: { class: 'form-control input-sm' } %>
+                                    </div>
+                
+                                    <label>Gender</label>
+                                    <div class="form-group">
+                                          <%= f.input :gender , label: false, input_html: { class: 'form-control input-sm' } %>
+                                    </div>
+                
+                                    <label>Image</label>
+                                    <div class="form-group">
+                                        <%= f.input :photo, label: false %>
+                                    </div>
+                
+                                    <label for="">Main Position</label>
+                                    <div class="form-group">
+                                        <%= f.input :main_position, label: false, input_html: { class: 'form-control input-sm' } %>
+                                    </div>
+                
+                                    <label>Other Position</label>
+                                    <div class="form-group">
+                                        <%= f.input :other_positions, label: false , input_html: { class: 'form-control input-sm' }%>
+                                    </div>
+                
+                                    <label>Nationality</label>
+                                    <div class="form-group">
+                                        <%= f.input :nationality, label: false, input_html: { class: 'form-control input-sm' } %>
+                                    </div>
+                
+                                    <label>Second Nationality</label>
+                                    <div class="form-group">
+                                        <%= f.input :second_nationality, label: false, input_html: { class: 'form-control input-sm' } %>
+                                    </div>
+                
+                                    <label>Born/Age</label>
+                                    <div class="form-group">
+                                        <%= f.input :born, label: false,as: :date, start_year: Date.today.year - 90,
+                                                                                                end_year: Date.today.year - 12, discard_day: true,
+                                                                                                order: [:day, :month, :year]  %> 
+                                    </div>
+                
+                                    <label>Height</label>
+                                    <div class="form-group">
+                                          <%= f.input :height, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+                
+                                    <label>Foot</label>
+                                    <div class="form-group">                 
+                                        <%= f.input :foot, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+                
+                                    <label>Current Club</label>
+                                    <div class="form-group">
+                                          <%= f.input :current_club, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+                
+                                    <label>Country</label>
+                                    <div class="form-group">
+                                        <select class="form-control input-sm">
+                                            <option>Egypt</option>
+                                            <option>Qatar</option>
+                                            <option>UAE</option>
+                                        </select>
+                                    </div>
+                
+                                    <label>Competition</label>
+                                    <div class="form-group">
+                                          <%= f.input :competition, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+                
+                                    <label>Tier</label>
+                                    <div class="form-group">
+                                        <%= f.input :tier, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+                
+                                    <label>Contract Status</label>
+                                    <div class="form-group">
+                                        <%= f.input :contract_status, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+                
+                                    <label>Ending Contract</label>
+                                    <div class="form-group">
+                                        <%= f.input :ending_contract, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+                
+                                    <label>Agent</label>
+                                    <div class="form-group">
+                                        <%= f.input :agent, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+                
+                                    <label>International</label>
+                                    <div class="form-group">
+                                        <%= f.input :international, label: false, input_html: { class: 'form-control' } %>
+                                    </div>
+                
+                                    
+                
+                                    <label>Social Media</label>
+                                    <div class="form-group">
+                                        <%= f.input :social_face, label: false, placeholder: "Facebook link", input_html: { class: 'form-control' } %>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <%= f.input :social_insta, label: false, placeholder: "Instagram link", input_html: { class: 'form-control' } %>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <%= f.input :social_twit, label: false, placeholder: "Twitter link", input_html: { class: 'form-control' } %>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <%= f.input :youtube_links, label: false ,placeholder: "Youtube link", input_html: { class: 'form-control input-sm' } %>
+                                    </div>
+             
+                                </form>
+
+                                <form>
+                                    <h2>Trophies</h2>
+
+                                    <span>Domestic</span>
+
+                                <div id='tasks'>
+                                    <%= f.simple_fields_for :domestics do |domestic| %>
+                                        <%= render 'domestic_fields', :f => domestic %>
+                                    <% end %>
+                                    <div class="links col-xs-2" style="float: left;">
+                                    <%= link_to_add_association 'add task', f, :domestics ,style: " background-color: #444; color: white;",class: 'btn btn-primary' %>
+                                    </div>
+                                    <br><br>
+                                </div>
+                                                                
+
+                                    <span>Continental</span>
+
+                                    <div id='tasks'>
+                                        <%= f.simple_fields_for :continentals do |continental| %>
+                                            <%= render 'continental_fields', :f => continental %>
+                                        <% end %>
+                                        <div class='links'>
+                                        <%= link_to_add_association 'add task', f, :continentals ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary' %>
+                                        </div>
+                                        <br><br>
+                                    </div>
+                                </form>
+                            </div>
+                
+                            <div class="col-md-6">
+                                <form>
+                                    <h2>Transfer History</h2>
+                                    <div id='tasks'>
+                                        <%= f.simple_fields_for :transfers do |transfer| %>
+                                            <%= render 'transfer_fields', :f => transfer %>
+                                        <% end %>
+                                        <div class='links'>
+                                        <%= link_to_add_association 'add task', f, :transfers ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary' %>
+                                        </div>
+                                        <br><br>
+
+                                    </div>
+    
+                                    
+                                </form>
+
+                                <form>
+                                        <h2>Performance</h2>
+                                        <div id='tasks'>
+                                            <%= f.simple_fields_for :performances do |performance| %>
+                                                <%= render 'performance_fields', :f => performance %>
+                                            <% end %>
+                                            <div class='links'>
+                                            <%= link_to_add_association 'add task', f, :performances ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary' %>
+                                            </div>
+                                            <br><br>
+
+                                        </div>
+                                        
+                                    </form>
+
+                                    <form>
+                                        <h2>National Career</h2>
+                                        <div id='tasks'>
+                                            <%= f.simple_fields_for :national_careers do |national_career| %>
+                                                <%= render 'national_career_fields', :f => national_career %>
+                                            <% end %>
+                                            <div class='links'>
+                                            <%= link_to_add_association 'add task', f, :national_careers ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary' %>
+                                            </div>
+                                            <br><br>
+
+                                        </div>
+                                        
+                                    </form>
+
+                                    <form>
+                                            <span>National</span>
+
+                                            <div id='tasks'>
+                                                <%= f.simple_fields_for :nationals do |national| %>
+                                                    <%= render 'national_fields', :f => national %>
+                                                <% end %>
+                                                <div class='links'>
+                                                <%= link_to_add_association 'add task', f, :nationals %>
+                                                </div>
+                                                <br><br>
+
+                                            </div>
+                                    <span>Individual</span>
+                                        <div id='tasks'>
+                                            <%= f.simple_fields_for :individuals do |individual| %>
+                                                <%= render 'individual_fields', :f => individual %>
+                                            <% end %>
+                                            <div class='links'>
+                                            <%= link_to_add_association 'add task', f, :individuals ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary'  %>
+                                            </div>
+                                            <br><br>
+
+                                        </div>
+                                    </form>
+                            </div>
+                    <div class="actions">
+                        <%= f.submit %>
+                    </div>
+                <% end %>
+    
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,37 @@
+<div class='nested-fields'>
+
+
+                                        <label>Team</label>
+                                        <div class="form-group">
+                                            <%= f.input :team, label: false, input_html: { class: 'form-control' } %>
+                                        </div>
+
+                                        <label>Matches</label>
+                                        <div class="form-group">
+                                                <%= f.input :matches, label: false, input_html: { class: 'form-control' } %>
+                                        </div>
+
+                                        <label>Goals</label>
+                                        <div class="form-group">
+                                          <%= f.input :goals, label: false, input_html: { class: 'form-control' } %>
+                                        </div>
+
+                                        <label>Assists</label>
+                                        <div class="form-group">
+                                            <%= f.input :assists, label: false, input_html: { class: 'form-control' } %>
+                                        </div>
+
+                                        <label>Yellow</label>
+                                        <div class="form-group">
+                                          <%= f.input :yellow, label: false, input_html: { class: 'form-control' } %>
+                                        </div>
+
+                                        <label>Red</label>
+                                        <div class="form-group">
+                                          <%= f.input :red, label: false, input_html: { class: 'form-control' } %>
+                                        </div>
+  <div class="col-xs-2" style="float: left;">
+    <%= link_to_remove_association "remove task" , f ,style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary' %>
+</div>  
+
+</div>

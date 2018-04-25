@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  competition: MyString
+  countts: 1
+  years: 2018-04-03
+  position: MyString
+  player: one
+
+two:
+  competition: MyString
+  countts: 1
+  years: 2018-04-03
+  position: MyString
+  player: two

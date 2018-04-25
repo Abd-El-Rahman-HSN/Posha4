@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: MyString
+  main_position: MyString
+  nationality: MyString
+  age: MyString
+  last_comp: MyString
+  with_con_since: MyString
+
+two:
+  position: MyString
+  main_position: MyString
+  nationality: MyString
+  age: MyString
+  last_comp: MyString
+  with_con_since: MyString

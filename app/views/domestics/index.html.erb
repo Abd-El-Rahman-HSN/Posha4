@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Domestics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Competition</th>
+      <th>Countts</th>
+      <th>Years</th>
+      <th>Position</th>
+      <th>Player</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @domestics.each do |domestic| %>
+      <tr>
+        <td><%= domestic.competition %></td>
+        <td><%= domestic.countts %></td>
+        <td><%= domestic.years %></td>
+        <td><%= domestic.position %></td>
+        <td><%= domestic.player %></td>
+        <td><%= link_to 'Show', domestic %></td>
+        <td><%= link_to 'Edit', edit_domestic_path(domestic) %></td>
+        <td><%= link_to 'Destroy', domestic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Domestic', new_domestic_path %>

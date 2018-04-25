@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: MyString
+  matches: 1
+  goals: 1
+  assists: 1
+  yellow: 1
+  red: 1
+  player: one
+
+two:
+  team: MyString
+  matches: 1
+  goals: 1
+  assists: 1
+  yellow: 1
+  red: 1
+  player: two

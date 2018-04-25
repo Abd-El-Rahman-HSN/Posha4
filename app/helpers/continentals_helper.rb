@@ -1,0 +1,2 @@
+module ContinentalsHelper
+end

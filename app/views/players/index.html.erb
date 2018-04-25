@@ -1,0 +1,162 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Players</h1>
+
+<%= form_tag(players_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Gender</th>
+      <th>Photo</th>
+      <th>Main position</th>
+      <th>Other positions</th>
+      <th>Nationality</th>
+      <th>Second nationality</th>
+      <th>Born</th>
+      <th>Height</th>
+      <th>Foot</th>
+      <th>Current club</th>
+      <th>Country</th>
+      <th>Competition</th>
+      <th>Tier</th>
+      <th>Contract status</th>
+      <th>Ending contract</th>
+      <th>Agent</th>
+      <th>Social face</th>
+      <th>Social twit</th>
+      <th>Social insta</th>
+      <th>International</th>
+      <th>Youtube links</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.name %></td>
+        <td><%= player.number %></td>
+        <td><%= player.gender %></td>
+        <td><%= player.photo.url(:thumb) %></td>
+        <td><%= player.main_position %></td>
+        <td><%= player.other_positions %></td>
+        <td><%= player.nationality %></td>
+        <td><%= player.second_nationality %></td>
+        <td><%= player.born %></td>
+        <td><%= player.height %></td>
+        <td><%= player.foot %></td>
+        <td><%= player.current_club %></td>
+        <td><%= player.country %></td>
+        <td><%= player.competition %></td>
+        <td><%= player.tier %></td>
+        <td><%= player.contract_status %></td>
+        <td><%= player.ending_contract %></td>
+        <td><%= player.agent %></td>
+        <td><%= player.social_face %></td>
+        <td><%= player.social_twit %></td>
+        <td><%= player.social_insta %></td>
+        <td><%= player.international %></td>
+        <td><%= player.youtube_links %></td>
+        <td><%= link_to 'Show', player %></td>
+        <td><%= link_to 'Edit', edit_player_path(player) %></td>
+        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Player', new_player_path %>
+
+
+
+<header class="header-allplayer">
+        
+        <div class="container">
+            <h1>All Players</h1>
+        </div>
+    </header>
+
+    
+    <div class="allplayers">
+        <div class="container">
+                <div class="result table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Player(s)</th>
+                                    <th>Nat</th>
+                                    <th>Age</th>
+                                    <th>Height</th>
+                                    <th>Foot</th>
+                                    <th>Last Club</th>
+                                    <th>Without Club Since</th>
+                                    <th>Market Value</th>
+                                </tr>
+                            </thead>
+        
+                            <tbody>
+                             <% @players.each do |player| %>
+                                <tr>
+                                    <td><%= image_tag("players/nasri.jpg" , alt: "nasri") %></td>
+                                    <td>
+                                        <a href="#" target="_blank" class="tooltip" data-tooltip-content="#tooltip_content"><%= player.name %></a>
+                                        <span>Without</span>
+                                    </td>
+                                    <td>
+                                    <%= image_tag("nat/france.png" , alt: "France") %>
+                                    <%= image_tag("nat/algria.png" , alt: "France") %>
+
+                                    </td>
+                                    <td>30</td>
+                                    <td>1.77m</td>
+                                    <td>Right</td>
+                                    <td><%= image_tag("clubs/without.png") %></td>
+                                    <td>Jan 31, 2016</td>
+                                    <td>6.00 Mill</td>
+                                </tr>
+
+                                <tr>                                        
+                                    <td><%= image_tag("players/nasri.jpg" , alt: "nasri") %></td>
+                                    <td>
+                                        <a href="playercv.html" target="_blank" class="tooltip" data-tooltip-content="#tooltip_content">Messi</a>
+                                        <a href="#">FC Baraclona</a>
+                                    </td>
+                                    <td>
+                                      <%= image_tag("nat/france.png" , alt: "France") %>
+                                    <%= image_tag("nat/algria.png" , alt: "France") %>
+                                    </td>
+                                    <td>30</td>
+                                    <td>1.77m</td>
+                                    <td>Right</td>
+                                    <td><%= image_tag("clubs/barca.png") %></td>
+                                    <td>Jan 31, 2016</td>
+                                    <td>6.00 Mill</td>
+                                </tr>
+        
+                                
+                            </tbody>
+        
+                        </table>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>></li>
+                        <li>>></li>
+                    </ul>
+        </div>
+    </div>
+

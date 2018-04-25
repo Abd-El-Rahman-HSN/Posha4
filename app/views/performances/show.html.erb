@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @performance.season %>
+</p>
+
+<p>
+  <strong>Club:</strong>
+  <%= @performance.club %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @performance.country %>
+</p>
+
+<p>
+  <strong>Competition:</strong>
+  <%= @performance.competition %>
+</p>
+
+<p>
+  <strong>Tier:</strong>
+  <%= @performance.tier %>
+</p>
+
+<p>
+  <strong>Matches:</strong>
+  <%= @performance.matches %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= @performance.goals %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= @performance.assists %>
+</p>
+
+<p>
+  <strong>Yellow:</strong>
+  <%= @performance.yellow %>
+</p>
+
+<p>
+  <strong>Red:</strong>
+  <%= @performance.red %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @performance.player %>
+</p>
+
+<%= link_to 'Edit', edit_performance_path(@performance) %> |
+<%= link_to 'Back', performances_path %>

@@ -1,0 +1,54 @@
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <!--Start Login Form-->
+
+    <div class="login">
+
+        <div class="container">
+                
+            <div class="row">
+
+                <div class="col-md-5 ">
+                    <div class="login-info">
+                        <h3>Welcome Back!</h3>
+                        <p>it's your first time ? .. Just sign up now</p>
+                        <button class="btn btn-primary">Sign Up</button>       
+                    </div>
+                </div>
+            
+                <div class="col-md-7">
+                <div class="col-md-12">
+                    <form>
+                        <br><br>
+                        <label >Email</label>
+                        <div class="form-group">
+                        <%= f.input :email, autofocus: true, autocomplete: "email" , label: false, input_html: { class: 'form-control input-lg input' }, placeholder: "Your Email" %>
+                        </div>
+            
+                        <label>Password</label>
+                        <div class="form-group">
+                        <%= f.input :password, autocomplete: "off", label: false, input_html: { class: 'form-control input-lg input' }, placeholder: "Password"  %>
+                        </div>
+
+                        
+                        <% if devise_mapping.rememberable? -%>
+                            <div class="field">
+                               <%= f.input :remember_me, :as => :boolean %>
+                            </div>
+                          <% end -%>
+
+                         <a href="#"><%= render "devise/shared/links" %></a>
+                         <br>
+                        <%= f.submit "Log in" ,class: "btn btn-primary"%>
+                        <br><br>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+    </div>
+    <% end %>
+    <!--End Login Form-->
+
+  

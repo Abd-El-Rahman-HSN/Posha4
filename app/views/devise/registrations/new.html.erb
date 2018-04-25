@@ -1,0 +1,76 @@
+
+
+<%= simple_form_for @user , url: registration_path(resource_name), html: { multipart: true } do |f| %>
+  <%= devise_error_messages! %>
+
+
+
+<!--Start Login Form-->
+
+    <div class="register">
+
+        <div class="container">
+                
+            <div class="row">
+
+                <div class="col-md-5 ">
+                    <div class="login-info">
+                        <h3>Be The Best</h3>
+                        <p>Register Now and make it happen</p>      
+                    </div>
+                </div>
+            
+                <div class="col-md-7">
+                <div class="col-md-12">
+                    <form>
+
+<br><br>
+                        <label for="">Full Name</label>
+                        <div class="form-group">
+                            <%= f.input :Full_Name, label: false, input_html: { class: 'form-control input-lg' }, placeholder: "Full Name" %>
+                        </div>
+
+                        <label for="">Email</label>
+                        <div class="form-group">
+                          <%= f.input :email, label: false, input_html: { class: 'form-control input-lg' }, placeholder: "Your Email" %>
+                        </div>
+            
+                        <label for="">Password</label>
+                        <div class="form-group">
+                                <% if @minimum_password_length %>
+                                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                                <% end %><br />
+                                <%= f.input :password, autocomplete: "off", label: false, input_html: { class: 'form-control input-lg' }, placeholder: "Password" %>
+                        </div>
+
+                        <label for="">Confirm Password</label>
+                        <div class="form-group">
+                            <%= f.input :password_confirmation, autocomplete: "off", label: false, input_html: { class: 'form-control input-lg' }, placeholder: "Password Confirmation" %>
+                        </div>
+
+                        <div class="checkboxes">
+                        
+                                <label>journalist</label>
+                                <%= f.input :journalist , label: false, as: :boolean  %>
+                        
+                                <label>PaidMember</label>
+                                <%= f.input :PaidMember , label: false, as: :boolean %>
+                       
+                        </div>
+                        <div class="col-5"></div>
+                    
+                       <div class="col-5">
+                        <%= f.submit "Register",style: "float: left; background-color: #444; color: white;",class: 'btn btn-primary'  %>
+                        </div>
+                        <br>
+                        <div class="col-2"></div>
+                        
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+    <% end %>
+    <!--End Login Form-->

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Continentals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Competition</th>
+      <th>Countts</th>
+      <th>Years</th>
+      <th>Position</th>
+      <th>Player</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @continentals.each do |continental| %>
+      <tr>
+        <td><%= continental.competition %></td>
+        <td><%= continental.countts %></td>
+        <td><%= continental.years %></td>
+        <td><%= continental.position %></td>
+        <td><%= continental.player %></td>
+        <td><%= link_to 'Show', continental %></td>
+        <td><%= link_to 'Edit', edit_continental_path(continental) %></td>
+        <td><%= link_to 'Destroy', continental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Continental', new_continental_path %>

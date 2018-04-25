@@ -1,0 +1,21 @@
+
+<h1>New Article</h1>
+  <%= simple_form_for(@article) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+    <br>
+    <h5>Name</h5>
+      <%= f.input :nameae, label: false , input_html: { class: 'form-control input-sm' } %>
+      <hr>
+      <h5>Photo Article</h5>
+      <%= f.input :img , as: :file, label: false %>
+      <hr>
+      <h5>Article</h5>
+      <%= f.cktext_area :text %>
+    </div>
+<br>
+  <div class="col-xs-2" style="float: left;">
+    <%= f.submit "Save" , class: "btn btn-lg btn-block"%>
+  </div>
+  <% end %>

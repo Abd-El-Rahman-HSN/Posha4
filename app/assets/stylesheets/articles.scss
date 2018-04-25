@@ -1,0 +1,225 @@
+//import file
+@font-face {
+    font-family: abolition;
+    src: url(../fonts/abolition-regular-webfont.woff);
+}
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+//will be replaced with the same font without internet;
+
+//variables
+$defualtColor:#ccc;
+$otherColor:#f1f1f1;
+$whiteColor:#fff;
+$uppernav:#545454;
+$oddColor:#f5f5f5;
+
+//Public Rules
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    zoom:90%;
+}
+
+.row {
+    margin: 0;
+}
+
+//End Public
+
+
+.upper-nav {
+    background-color: $uppernav;
+    margin-bottom: 0;
+
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li {
+            padding: 10px 20px 10px 0;
+            color: $whiteColor;
+            cursor: pointer;
+            a {
+                color: $whiteColor;
+            }
+        }
+    }
+
+    .user-opt {
+        justify-content: flex-end;
+    }
+}
+
+
+nav {
+    @extend %transition;
+    background-color: rgb(68, 68, 68);
+    z-index: 99999999;
+    width: 100%;
+
+    .navbar-brand {
+        @extend %transition;
+        font-family: abolition;
+        font-size: 35px;
+    }
+}
+
+header {
+
+    background-image: url("header/1.jpg");
+    background-size: cover;
+    padding: 10px 10px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    color: $whiteColor;
+}
+
+
+.content {
+    background-color: $otherColor;
+
+    .article-nav {
+        background-color: #444;
+
+        ul {
+            display: flex;
+
+            li {
+
+                color: $whiteColor;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .article-body {
+        background-color: $whiteColor;
+
+        > div:not(:first-of-type) {
+            display: none;
+        }
+        
+        .article {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+    
+    
+            .plr-img {
+            
+                img {
+                    width: 100%;
+                }
+            }
+        
+            .article-info {
+        
+                line-height: 1.5;
+        
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .article:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+
+
+    .journalist {
+        padding: 10px 0;
+        background-color: $whiteColor;
+
+        h3 {
+            margin-bottom: 20px;
+            color: #616161;
+            padding: 0 10px;
+        }
+
+        .jou-img {
+
+            img {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+            }
+        }
+
+        .jou-name {
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .journalist:last-of-type {
+        border-bottom: none;
+    }
+    
+    .insta-feed {
+        background-color: $whiteColor;
+        margin-top: 20px;
+    }
+
+    .fb-feed {
+        background-color: $whiteColor;
+        margin-top: 20px;
+    }
+
+}
+
+
+footer {
+    background-color: #444;
+    text-align: center;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+
+        li {
+            padding: 10px;
+
+            a {
+                color: $whiteColor;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $whiteColor;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        padding: 0;
+        background-color: rgb(51, 51, 51);
+        color: $whiteColor;
+
+        p {
+            padding: 10px;
+            margin: 0;
+        }
+    }
+
+}
+
+%transition {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}

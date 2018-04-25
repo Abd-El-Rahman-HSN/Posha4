@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @national_career.team %>
+</p>
+
+<p>
+  <strong>Matches:</strong>
+  <%= @national_career.matches %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= @national_career.goals %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= @national_career.assists %>
+</p>
+
+<p>
+  <strong>Yellow:</strong>
+  <%= @national_career.yellow %>
+</p>
+
+<p>
+  <strong>Red:</strong>
+  <%= @national_career.red %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @national_career.player %>
+</p>
+
+<%= link_to 'Edit', edit_national_career_path(@national_career) %> |
+<%= link_to 'Back', national_careers_path %>

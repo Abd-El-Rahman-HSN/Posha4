@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Competition:</strong>
+  <%= @national.competition %>
+</p>
+
+<p>
+  <strong>Countts:</strong>
+  <%= @national.countts %>
+</p>
+
+<p>
+  <strong>Years:</strong>
+  <%= @national.years %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @national.position %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @national.player %>
+</p>
+
+<%= link_to 'Edit', edit_national_path(@national) %> |
+<%= link_to 'Back', nationals_path %>

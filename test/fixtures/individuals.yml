@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hyper: MyString
+  photo: MyString
+  linkd: MyString
+  player: one
+
+two:
+  hyper: MyString
+  photo: MyString
+  linkd: MyString
+  player: two
